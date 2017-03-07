@@ -9,7 +9,7 @@ body {
     line-height: 20px;
     width: 355px;
     height: 600px;
-    border: 0px solid #4f504f;
+    border: 1px solid #4f504f;
     padding: 4px 8px 2px 8px;
 }
 
@@ -69,20 +69,22 @@ div.wrapper{
 div.left_arrow{
     width:56px;
     height: 50px;
+    margin-left:15px;
     float: left;
 }
 
 div.home_button{
     width:64px;
     height: 50px;
-    margin-left: 89px;
-    margin-right:89px;
+	margin-left: 74px;
+    margin-right:79px;
     float:left;
 }
 
 div.right_arrow{
     width:56px;
     height:50px;
+    margin-right:10px;
     float: left;
 }
 
@@ -212,7 +214,6 @@ text.homepage {
 
 .buttons_homepage{
     fill:#Fee8cb;
-    margin-right:10px;
 }
 
 body.explanation {

@@ -13,7 +13,7 @@
 
     var margin = {
         top: 5,
-        right: 10,
+        right: 30,
         bottom: 25,
         left: 45
       };
@@ -198,6 +198,7 @@ d3.select("body")
   .append("p")
   .style("margin-top","0px")
   .style("opacity","0")
+  .style("width","335px")
   .html('What these bars represent is the percentage of female deaths in each age group caused by heart or cardiovascular diseases such as stroke, heart attack and hypertension.')
   .transition()
     .delay(5000)
@@ -209,7 +210,8 @@ d3.select("body")
   .append("p")
   .style("margin-top","0px")
   .style("opacity","0")
-  .html("So out of every 100 women who've died over the age of 70, 45 died from heart disease. The share of heart disease rises for women older than 35.")
+  .style("width","335px")
+  .html("So of every 100 women over the age of 70 who've died, 45 died from heart disease. The share of heart disease rises for women over 35.")
   .transition()
     .delay(7000)
     .duration(3000)

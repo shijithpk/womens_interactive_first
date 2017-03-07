@@ -14,7 +14,7 @@
 
     var margin = {
         top: 10,
-        right: 10,
+        right: 20,
         bottom: 20,
         left: 150
       };
@@ -37,17 +37,17 @@
     var xAxis = d3.axisBottom(x)
         .ticks(10);
 
-        var yAxis = d3.axisLeft(y);
+    var yAxis = d3.axisLeft(y);
 
     var defs = svg.append("defs");
 
-        var linearGradient = defs.append("linearGradient")
-                      .attr("id", "gradient")
-                      .attr("x1", "0%")
-                      .attr("y1", "0%")
-                      .attr("x2", "100%")
-                      .attr("y2", "0%")
-                      .attr("spreadMethod", "reflect");
+    var linearGradient = defs.append("linearGradient")
+                  .attr("id", "gradient")
+                  .attr("x1", "0%")
+                  .attr("y1", "0%")
+                  .attr("x2", "100%")
+                  .attr("y2", "0%")
+                  .attr("spreadMethod", "reflect");
 
         var colours = ["#F7eee9", "#f1e0d6", "#ebd2c3", "#e4c3b0"]
 
@@ -109,7 +109,7 @@ xAxiscalled
           .style("font-weight","bold")
           .text("Disease category");
 */
-                  linearGradient
+        linearGradient
           .selectAll(".stop")
           .data(colours)
           .enter()
@@ -185,21 +185,23 @@ d3
   .style("margin-top","5px")
   .style("margin-bottom","10px")
   .style("opacity","0")
+  .style("width","345px")
+  .html("If we look at the most recent government data (from 2014) on the causes of death among Indian women, we see above that diseases of the heart and blood vessels are the biggest factor, causing 32% of deaths. Infectious and parasitic diseases are second with 12%.")
   .transition()
     .delay(4000)
     .duration(3000)
-    .style("opacity","1")
-    .text("If we look at the most recent government data (from 2014) on the causes of death among Indian women, we see above that diseases of the heart and blood vessels are the biggest factor, causing 32% of deaths. Infectious and parasitic diseases are the second-largest contributor with 12%.")
+    .style("opacity","1");
 
 d3.select("body")
   .append("p")
   .style("margin-top","0px")
   .style("opacity","0")
+  .style("width","345px")
+  .html("Note that this data is based on the 399,535 deaths of women in 2014 where the cause of death was medically certified. This is just a fraction of all deaths registered in the country, but it is still useful in learning which diseases affect female health most in India. Next, we take a look at how these diseases vary as a cause of death for different age groups.")
   .transition()
     .delay(6000)
     .duration(3000)
-    .style("opacity","1")
-    .text("Note that this data is based on the 399,535 deaths of women in 2014 where the cause of death was medically certified. This is just a fraction of all deaths registered in the country, but it is still useful in learning which diseases affect female health most in India. Next, we take a look at how these diseases vary as a cause of death for different age groups.");
+    .style("opacity","1");
 
 d3.xml("svg_graphics/shadow.svg").mimeType("image/svg+xml").get(function(error, xml) {
   if (error) throw error;
@@ -273,8 +275,7 @@ d3.xml("svg_graphics/fin_right_4.svg", function(error, xml) {
     .on("click", function(){
       d3.select(this).classed('shadow', false);
       window.open("circulatory.html","_self",false);
-        
-    });  
+      });  
 
 });
 </script>
